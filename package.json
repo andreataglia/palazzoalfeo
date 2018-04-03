@@ -10,9 +10,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "b-sync": "browser-sync start --server --files \"html/one-pages/travel/*.html\" \"html/one-pages/travel/assets/css/*.css\""
+    "b-sync": "browser-sync start --server --files \"html/one-pages/travel/*.html\" \"html/one-pages/travel/assets/css/*.css\"",
+    "start": "node ./index.js"
   },
-  "entry point": "(index.js)",
   "author": "Htmlstream",
   "license": "ISC",
   "dependencies": {
