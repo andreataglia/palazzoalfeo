@@ -1,0 +1,32 @@
+{
+  "title": "Palazzo Alfeo",
+  "menu1": "Home",
+  "menu2": "Chi Siamo",
+  "menu3": "Appartamenti",
+  "menu4": "Galleria",
+  "menu5": "Contatti",
+  "menu6": "EN",
+
+  "slideshow1_title": "Palazzo Alfeo, Benvenuti",
+  "slideshow1_sub": "Caloroso benvenuto....",
+  "slideshow1_button": "Fai un Giro",
+  "slideshow2_title": "Palazzo Alfeo, Benvenuti",
+  "slideshow2_sub": "Caloroso benvenuto....",
+  "slideshow2_button": "Fai un Giro",
+
+  "section2_box": "What is Palazzo Alfeo?",
+  "section2_title1": "Awesome",
+  "section2_title2": "Residence",
+  "section2_text": "Awesome apartments in a beautiful City. We offer six amazing apartments.",
+
+  "section2_box": "Our Apartments",
+  "section2_title1": "What We",
+  "section2_title2": "Offer",
+  "section2_text": "Donec eleifend mauris eu leo varius consectetur. Aliquam luctus a lorem ac rutrum. Cras in nulla id mi ornare vestibulum. Donec et magna nulla. Pellentesque ut ipsum id nibh pretium blandit quis ac erat.",
+  "room_size": "sqft",
+  "room1_title": "Aretusa",
+  "room1_text": "",
+  "room2_title": "Alfeo",
+  "room2_text": "",
+
+}

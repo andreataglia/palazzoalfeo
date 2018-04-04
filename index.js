@@ -7,6 +7,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+var cookieParser = require('cookie-parser');
+var i18n = require("i18n");
 
 
 /////////////////////////////////////////////
@@ -15,10 +17,43 @@ const nodemailer = require("nodemailer");
 
 let public_dir = "/html/one-pages/palazzoalfeo";
 app.use(express.static(__dirname + public_dir));
-app.use(express.static("html"))
+app.use(express.static("html"));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+
+// view engine setup
+app.set('views', "html/one-pages/palazzoalfeo");
+app.set('view engine', 'ejs');
+
+i18n.configure({
+    locales:['en', 'it'],
+    cookie: 'langCookie',
+    directory: __dirname + '/locales'
+});
+
+app.use(cookieParser());
+app.use(i18n.init);
+
+
+/////////////////////////////////////////////
+///////////////// APP.INIT //////////////////
+/////////////////////////////////////////////
+
+app.get('/', function(req, res) {
+    res.render('index');
+});
+
+app.get('/en', function(req, res) {
+    req.setLocale('en');
+    res.render('index');
+});
+
+app.get('/it', function(req, res) {
+    req.setLocale('it');
+    res.render('index');
+});
 
 
 
