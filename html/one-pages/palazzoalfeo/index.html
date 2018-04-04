@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="../../assets/vendor/animate.css">
     <link rel="stylesheet" href="../../assets/vendor/slick-carousel/slick/slick.css">
     <link rel="stylesheet" href="../../assets/vendor/master-slider/source/assets/css/masterslider.main.css">
+    <link  rel="stylesheet" href="../../assets/vendor/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="../../assets/vendor/cubeportfolio-full/cubeportfolio/css/cubeportfolio.min.css">
 
     <!-- CSS Template -->
@@ -42,7 +43,7 @@
 <body>
     <main>
         <!-- Header v1 -->
-        <header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance" data-header-fix-moment="100">
+        <header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance" data-header-fix-moment="1">
             <div class="u-header__section g-transition-0_3 g-py-12" data-header-fix-moment-exclude="g-py-12" data-header-fix-moment-classes="g-theme-bg-black-v1-opacity-0_8 g-py-7">
                 <nav class="navbar navbar-expand-lg g-py-0">
                     <div class="container g-pos-rel">
@@ -76,6 +77,18 @@
                             </ul>
                         </div>
                         <!-- End Navigation -->
+
+                        <div class="g-pos-rel g-width-50 g-pt-3--lg g-ml-30 g-ml-0--lg">
+                          <a href="#" id="languages-dropdown-invoker-2" class="g-color-gray-dark-v2 g-color-primary--hover g-text-underline--none--hover" aria-controls="languages-dropdown-2" aria-haspopup="true" aria-expanded="false" data-dropdown-event="click" data-dropdown-target="#languages-dropdown-2" data-dropdown-type="css-animation" data-dropdown-duration="500" data-dropdown-hide-on-scroll="false" data-dropdown-animation-in="fadeIn" data-dropdown-animation-out="fadeOut">
+                            EN&nbsp;<i class="fa fa-angle-down g-ml-3"></i>
+                          </a>
+                          <ul id="languages-dropdown-2" class="list-unstyled text-left u-shadow-v23 g-pos-abs g-left-0 g-bg-white g-width-160 g-z-index-2 g-py-20 g-pb-15 g-mt-25--lg g-mt-20--lg--scrolling u-dropdown--css-animation u-dropdown--hidden" aria-labelledby="languages-dropdown-invoker-2" style="animation-duration: 500ms;">
+                            <li><a class="d-block g-color-main g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="#">English</a></li>
+                            <li><a class="d-block g-color-main g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="#">Spanish</a></li>
+                            <li><a class="d-block g-color-main g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="#">Russian</a></li>
+                            <li><a class="d-block g-color-main g-color-primary--hover g-text-underline--none--hover g-py-8 g-px-20" href="#">German</a></li>
+                          </ul>
+                        </div>
 
                         <!-- Responsive Toggle Button -->
                         <button class="navbar-toggler btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-20 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
@@ -441,7 +454,7 @@
             </div>
 
             <!-- Cube Portfolio -->
-            <div class="cbp" data-layout="mosaic" data-animation="fadeOutTop" data-caption-animation="zoom" data-x-gap="0" data-y-gap="0" data-media-queries='[
+            <!--<div class="cbp" data-layout="mosaic" data-animation="fadeOutTop" data-caption-animation="zoom" data-x-gap="0" data-y-gap="0" data-media-queries='[
                {"width": 1500, "cols": 5},
                {"width": 1100, "cols": 4},
                {"width": 800, "cols": 3},
@@ -507,6 +520,83 @@
 
             <div class="cbp-l-loadMore-text"></div>
             <!-- End Cube Portfolio -->
+
+            <div class="row text-center">
+              <div class="col-md-4 g-mb-30">
+                <a class="js-fancybox d-block u-block-hover u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" href="../../assets/img-temp/400x270/img8.jpg" title="Lightbox Gallery" data-fancybox-gallery="lightbox-gallery-13-1-hidden">
+                  <img class="img-fluid u-block-hover__main--zoom-v1" src="../../assets/img-temp/400x270/img8.jpg" alt="Image Description">
+                  <strong class="h5 d-block w-100 u-bg-overlay__inner g-absolute-centered g-px-20 g-font-weight-400 g-color-white g-mt-10">
+                    Nulla ipsum dolor sit amet
+                  </strong>
+                </a>
+
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img1.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-1-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img2.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-1-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img3.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-1-hidden">
+              </div>
+              <div class="col-md-4 g-mb-30">
+                <a class="js-fancybox d-block u-block-hover u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" href="../../assets/img-temp/400x270/img4.jpg" title="Lightbox Gallery" data-fancybox-gallery="lightbox-gallery-13-2-hidden">
+                  <img class="img-fluid u-block-hover__main--zoom-v1" src="../../assets/img-temp/400x270/img4.jpg" alt="Image Description">
+                  <strong class="h5 d-block w-100 u-bg-overlay__inner g-absolute-centered g-px-20 g-font-weight-400 g-color-white g-mt-10">
+                    Consectetur adipiscing
+                  </strong>
+                </a>
+
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img5.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-2-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img6.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-2-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img7.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-2-hidden">
+              </div>
+              <div class="col-md-4 g-mb-30">
+                <a class="js-fancybox d-block u-block-hover u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" href="../../assets/img-temp/400x270/img7.jpg" title="Lightbox Gallery" data-fancybox-gallery="lightbox-gallery-13-3-hidden">
+                  <img class="img-fluid u-block-hover__main--zoom-v1" src="../../assets/img-temp/400x270/img7.jpg" alt="Image Description">
+                  <strong class="h5 d-block w-100 u-bg-overlay__inner g-absolute-centered g-px-20 g-font-weight-400 g-color-white g-mt-10">
+                    Elitut eleifend nisl
+                  </strong>
+                </a>
+
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img8.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-3-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img9.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-3-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img10.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-3-hidden">
+              </div>
+              <div class="col-md-4 g-mb-30">
+                <a class="js-fancybox d-block u-block-hover u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" href="../../assets/img-temp/400x270/img1.jpg" title="Lightbox Gallery" data-fancybox-gallery="lightbox-gallery-13-4-hidden">
+                  <img class="img-fluid u-block-hover__main--zoom-v1" src="../../assets/img-temp/400x270/img1.jpg" alt="Image Description">
+                  <strong class="h5 d-block w-100 u-bg-overlay__inner g-absolute-centered g-px-20 g-font-weight-400 g-color-white g-mt-10">
+                    In hac habitasse
+                  </strong>
+                </a>
+
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img11.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-4-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img12.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-4-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img13.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-4-hidden">
+              </div>
+              <div class="col-md-4 g-mb-30">
+                <a class="js-fancybox d-block u-block-hover u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" href="../../assets/img-temp/400x270/img2.jpg" title="Lightbox Gallery" data-fancybox-gallery="lightbox-gallery-13-5-hidden">
+                  <img class="img-fluid u-block-hover__main--zoom-v1" src="../../assets/img-temp/400x270/img2.jpg" alt="Image Description">
+                  <strong class="h5 d-block w-100 u-bg-overlay__inner g-absolute-centered g-px-20 g-font-weight-400 g-color-white g-mt-10">
+                    Platea dictumst
+                  </strong>
+                </a>
+
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img1.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-5-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img3.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-5-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img4.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-5-hidden">
+              </div>
+              <div class="col-md-4 g-mb-30">
+                <a class="js-fancybox d-block u-block-hover u-bg-overlay u-bg-overlay--v1 g-bg-black-opacity-0_5--after" href="../../assets/img-temp/400x270/img6.jpg" title="Lightbox Gallery" data-fancybox-gallery="lightbox-gallery-13-6-hidden">
+                  <img class="img-fluid u-block-hover__main--zoom-v1" src="../../assets/img-temp/400x270/img6.jpg" alt="Image Description">
+                  <strong class="h5 d-block w-100 u-bg-overlay__inner g-absolute-centered g-px-20 g-font-weight-400 g-color-white g-mt-10">
+                    Curabitur hendrerit
+                  </strong>
+                </a>
+
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img5.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-6-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img7.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-6-hidden">
+                <img class="hidden-xs-up" src="../../assets/img-temp/400x270/img8.jpg" alt="Image Description" data-fancybox-gallery="lightbox-gallery-13-6-hidden">
+              </div>
+            </div>
+
+
         </section>
         <!-- End Section Content -->
 
@@ -580,13 +670,13 @@
                                 </h2>
                             </div>
 
-                            <form>
+                            <form method="post" action="/contactForm">
                                 <div class="form-group g-mb-10">
-                                    <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="text" placeholder="Your name">
+                                    <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="text" placeholder="Your name" name="name">
                                 </div>
 
                                 <div class="form-group g-mb-10">
-                                    <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="tel" placeholder="Your phone">
+                                    <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="tel" placeholder="Your phone" name="phone">
                                 </div>
 
                                 <div class="form-group g-mb-10">
@@ -642,6 +732,7 @@
     <script src="../../assets/vendor/appear.js"></script>
     <script src="../../assets/vendor/slick-carousel/slick/slick.js"></script>
     <script src="../../assets/vendor/master-slider/source/assets/js/masterslider.min.js"></script>
+    <script  src="../../assets/vendor/fancybox/jquery.fancybox.min.js"></script>
     <script src="../../assets/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
     <script src="../../assets/vendor/gmaps/gmaps.min.js"></script>
 
@@ -676,6 +767,7 @@
     <script src="../../assets/js/components/hs.select.js"></script>
     <script src="../../assets/js/components/hs.carousel.js"></script>
     <script src="../../assets/js/components/hs.cubeportfolio.js"></script>
+    <script  src="../../assets/js/components/hs.popup.js"></script>
     <script src="../../assets/js/components/gmap/hs.map.js"></script>
     <script src="../../assets/js/components/hs.go-to.js"></script>
 
@@ -727,13 +819,11 @@
             // initialization of custom select
             $.HSCore.components.HSSelect.init('.js-custom-select');
 
-            // initialization of rating
-            $.HSCore.components.HSRating.init($('.js-rating'), {
-                spacing: 2
-            });
-
             // initialization of go to section
             $.HSCore.components.HSGoTo.init('.js-go-to');
+
+            // initialization of popups
+            $.HSCore.components.HSPopup.init('.js-fancybox');
         });
 
         $(window).on('load', function() {

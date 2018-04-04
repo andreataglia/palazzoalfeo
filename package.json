@@ -1,7 +1,8 @@
 {
-  "name": "unify",
-  "version": "2.0.0",
-  "description": "Unify - Responsive Website Template",
+  "name": "palazzoalfeo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "description": "Palazzo Alfeo",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
@@ -10,7 +11,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "b-sync": "browser-sync start --server --files \"html/one-pages/travel/*.html\" \"html/one-pages/travel/assets/css/*.css\"",
+    "b-sync": "browser-sync start --server --files \"html/one-pages/palazzoalfeo/*.html\" \"html/one-pages/palazzoalfeo/assets/css/*.css\"",
     "start": "node ./index.js"
   },
   "author": "Htmlstream",
