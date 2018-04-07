@@ -32,6 +32,10 @@
     <link rel="stylesheet" href="../../assets/vendor/master-slider/source/assets/css/masterslider.main.css">
     <link  rel="stylesheet" href="../../assets/vendor/fancybox/jquery.fancybox.min.css">
 
+    <!-- CSS form -->
+    <link rel="stylesheet" href="assets/skyforms/css/sky-forms.css">
+    <link rel="stylesheet" href="assets/skyforms/custom/custom-sky-forms.css">
+
     <!-- CSS Template -->
     <link rel="stylesheet" href="assets/css/styles.op-travel.css">
 
@@ -658,7 +662,8 @@
                                 </h2>
                             </div>
 
-                            <form method="post" action="/contactForm">
+                            <form method="post" action="/contactForm" id="sky-form3" class="myform">
+                              <fieldset>
                                 <div class="form-group g-mb-10">
                                     <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="text" placeholder="Your name" name="name">
                                 </div>
@@ -668,14 +673,20 @@
                                 </div>
 
                                 <div class="form-group g-mb-10">
-                                    <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="text" placeholder="Subject">
+                                    <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="email" placeholder="Your Email" name="mail">
                                 </div>
 
                                 <div class="form-group g-mb-40">
-                                    <textarea class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-resize-none g-brd-none g-rounded-1 g-pa-10" rows="5" placeholder="Message"></textarea>
+                                    <textarea class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-resize-none g-brd-none g-rounded-1 g-pa-10" rows="5" placeholder="Message" name="msg"></textarea>
                                 </div>
 
                                 <button class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" type="submit" role="button">Send Message</button>
+                              </fieldset>
+
+                                <div class="message">
+                                    <i class="rounded-x fa fa-check"></i>
+                                    <p>Inviato correttamente!</p>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -721,7 +732,7 @@
     <script src="../../assets/vendor/slick-carousel/slick/slick.js"></script>
     <script src="../../assets/vendor/master-slider/source/assets/js/masterslider.min.js"></script>
     <script  src="../../assets/vendor/fancybox/jquery.fancybox.min.js"></script>
-  <script src="../../assets/vendor/gmaps/gmaps.min.js"></script>
+    <script src="../../assets/vendor/gmaps/gmaps.min.js"></script>
 
     <!-- jQuery UI Core -->
     <script src="../../assets/vendor/jquery-ui/ui/widget.js"></script>
@@ -740,6 +751,13 @@
     <script src="../../assets/vendor/chosen/chosen.jquery.js"></script>
     <script src="../../assets/vendor/image-select/src/ImageSelect.jquery.js"></script>
 
+    <!-- SkyForm -->
+    <script src="assets/skyforms/js/jquery.validate.min.js"></script>
+    <script src="assets/skyforms/js/jquery.maskedinput.min.js"></script>
+    <script src="assets/skyforms/js/jquery-ui.min.js"></script>
+    <script src="assets/skyforms/js/jquery.form.min.js"></script>
+    <script src="assets/skyforms/js/contact.js"></script>
+
     <!-- JS Unify -->
     <script src="../../assets/js/hs.core.js"></script>
     <script src="../../assets/js/components/hs.header.js"></script>
@@ -747,7 +765,7 @@
     <script src="../../assets/js/components/hs.scroll-nav.js"></script>
     <script src="../../assets/js/components/hs.datepicker.js"></script>
     <script src="../../assets/js/components/hs.select.js"></script>
-    <script  src="../../assets/js/components/hs.popup.js"></script>
+    <script src="../../assets/js/components/hs.popup.js"></script>
     <script src="../../assets/js/components/hs.carousel.js"></script>
     <script src="../../assets/js/components/gmap/hs.map.js"></script>
     <script src="../../assets/js/components/hs.go-to.js"></script>
@@ -794,9 +812,6 @@
             $.HSCore.components.HSHeader.init($('#js-header'));
             $.HSCore.helpers.HSHamburgers.init('.hamburger');
 
-            // initialization of datepicker
-            $.HSCore.components.HSDatepicker.init('.js-datepicker');
-
             // initialization of custom select
             $.HSCore.components.HSSelect.init('.js-custom-select');
 
@@ -805,6 +820,9 @@
 
             // initialization of popups
             $.HSCore.components.HSPopup.init('.js-fancybox');
+
+            // contact form
+            ContactForm.initContactForm();
         });
 
         $(window).on('load', function() {

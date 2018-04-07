@@ -29,4 +29,13 @@
   "room2_title": "Alfeo",
   "room2_text": "",
 
+  "footer_title": "Contact Us",
+  "footer_": "ddds",
+  "form_title1": "Want to know",
+  "form_title2": "More?",
+  "form_field1": "Your Name",
+  "form_field2": "Your Phone",
+  "form_field3": "Your Email",
+  "form_field4": "Your Message",
+  "form_submitted": "Message sent correctly! <br> We'll get back to you as soon as possible"
 }
