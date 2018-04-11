@@ -30,7 +30,8 @@ app.set('view engine', 'ejs');
 i18n.configure({
     locales:['en', 'it'],
     cookie: 'langCookie',
-    directory: __dirname + '/locales'
+    directory: __dirname + '/locales',
+    updateFiles: false
 });
 
 app.use(cookieParser());

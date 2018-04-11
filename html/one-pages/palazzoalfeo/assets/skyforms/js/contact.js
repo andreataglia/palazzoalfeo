@@ -17,7 +17,7 @@ var ContactForm = function () {
 	                {
 	                    required: true
 	                },
-                  email:
+                  mail:
 	                {
 	                    required: true,
 	                    email: true
@@ -40,9 +40,10 @@ var ContactForm = function () {
 	                {
 	                    required: 'Insert a valid phone number'
 	                },
-                  email:
+                  mail:
 	                {
-	                    required: 'Insert a valid email'
+	                    required: 'Insert a valid email',
+                      email: 'Insert a valid email'
 	                },
 	                msg:
 	                {

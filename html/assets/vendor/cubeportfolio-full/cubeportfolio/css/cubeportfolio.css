@@ -2870,7 +2870,7 @@
 /* default state */
 .cbp-l-loadMore-defaultText,
 .cbp-l-loadMore-button-defaultText {
-  display: block; }
+  display: inline-block; }
 
 .cbp-l-loadMore-loadingText,
 .cbp-l-loadMore-noMoreLoading,
@@ -2881,7 +2881,7 @@
 /* loading state */
 .cbp-l-loadMore-loading .cbp-l-loadMore-loadingText,
 .cbp-l-loadMore-loading .cbp-l-loadMore-button-loadingText {
-  display: block; }
+  display: inline-block; }
 
 .cbp-l-loadMore-loading .cbp-l-loadMore-defaultText,
 .cbp-l-loadMore-loading .cbp-l-loadMore-noMoreLoading,
@@ -2892,7 +2892,7 @@
 /* no more loading */
 .cbp-l-loadMore-stop .cbp-l-loadMore-noMoreLoading,
 .cbp-l-loadMore-stop .cbp-l-loadMore-button-noMoreLoading {
-  display: block; }
+  display: inline-block; }
 
 .cbp-l-loadMore-stop .cbp-l-loadMore-defaultText,
 .cbp-l-loadMore-stop .cbp-l-loadMore-loadingText,
