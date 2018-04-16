@@ -76,18 +76,7 @@ app.post('/contactForm', function(req, res) {
     };
     var transporter = nodemailer.createTransport(smtpConfig);
 
-    var messaggio = "...non ha scritto niente";
-    var ospiti = "";
-
-    if (req.body.field1_label != null && req.body.field1_label == "guest" && req.body.field1_value != "") {
-        ospiti += req.body.field1_value;
-    }
-    if (req.body.field2_label != null && req.body.field2_label == "guest_1" && req.body.field2_value != "") {
-        ospiti += req.body.field2_value;
-    }
-    if (req.body.field3_label != null && req.body.field3_label == "guest_2" && req.body.field3_value != "") {
-        ospiti += ", " + req.body.field3_value;
-    }
+    var messaggio = "messaggio vuoto";
 
     if (req.body.msg != null && req.body.msg != "") {
         messaggio = req.body.msg;
@@ -95,10 +84,10 @@ app.post('/contactForm', function(req, res) {
 
     // setup e-mail data with unicode symbols
     var mailOptions = {
-        from: req.body.fromname + " <annaemasu@info.it>", // sender address
+        from: "Palazzo Alfeo", // sender address
         to: "drew.taglia@gmail.com", // list of receivers
         subject: "Massaggio da Palazzo Alfeo", // Subject line
-        html: '<p>Ha scritto <b>' + req.body.name + '</b>!! (con mail: ' + req.body.fromemail + ')</p> <p>Alla domanda chi "Ci sei?" ha detto: <b>' + req.body.field0_value + '</b> </p> <p>Parla a nome di: ' + ospiti + '<p> <p>Ha lasciato questo messaggio: ' + messaggio + '<p>'
+        html: '<p>Ha scritto <b>' + req.body.name + '</b> (mail: ' + req.body.mail + '; telefono: ' + req.body.phone + ')</p> <p>Ha scritto questo messaggio: ' + messaggio + '<p> <p><h3>Mail generata da Palazzo Alfeo official website</h3></p>'
     };
 
     // send mail with defined transport object
