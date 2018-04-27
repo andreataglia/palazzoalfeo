@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <!-- Title -->
     <title><%=__('title')%></title>
 
@@ -12,6 +12,20 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../favicon.ico">
+
+    <!-- Loading -->
+    <script>
+      function loaderOn() {
+        var isLoaded = setInterval(function () {
+          if (document.readyState === "complete") {
+            clearInterval(isLoaded);
+            $('.preload').fadeOut(500);
+          }
+        }, 100);
+      }
+
+      loaderOn();
+    </script>
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C500%2C600%2C700%2C800%7CRoboto%3A400%2C700%7CPlayfair+Display%7CRaleway%7CSpectral%7CRubik">
@@ -42,195 +56,244 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="../../assets/css/custom.css">
 
-    <!-- Loading -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script>
-    function loaderOn() {
-        var isLoaded = setInterval(function() {
-            if (document.readyState === "complete") {
-                clearInterval(isLoaded);
-                $('.preload').fadeOut(500);
-            }
-        }, 100);
-      }
+  </head>
 
-      loaderOn();
-    </script>
-</head>
-
-<body>
+  <body>
 
     <div class="preload">
       <svg id="loading">
-      <g>
-      	<path class="ld-l" fill="#39C0C4" d="M43.6,33.2h9.2V35H41.6V15.2h2V33.2z"/>
-      	<path class="ld-o" fill="#39C0C4" d="M74.7,25.1c0,1.5-0.3,2.9-0.8,4.2c-0.5,1.3-1.2,2.4-2.2,3.3c-0.9,0.9-2,1.6-3.3,2.2
+        <g>
+          <path class="ld-l" fill="#39C0C4" d="M43.6,33.2h9.2V35H41.6V15.2h2V33.2z"/>
+          <path
+            class="ld-o"
+            fill="#39C0C4"
+            d="M74.7,25.1c0,1.5-0.3,2.9-0.8,4.2c-0.5,1.3-1.2,2.4-2.2,3.3c-0.9,0.9-2,1.6-3.3,2.2
       		c-1.3,0.5-2.6,0.8-4.1,0.8s-2.8-0.3-4.1-0.8c-1.3-0.5-2.4-1.2-3.3-2.2s-1.6-2-2.2-3.3C54.3,28,54,26.6,54,25.1s0.3-2.9,0.8-4.2
       		c0.5-1.3,1.2-2.4,2.2-3.3s2-1.6,3.3-2.2c1.3-0.5,2.6-0.8,4.1-0.8s2.8,0.3,4.1,0.8c1.3,0.5,2.4,1.2,3.3,2.2c0.9,0.9,1.6,2,2.2,3.3
       		C74.4,22.2,74.7,23.6,74.7,25.1z M72.5,25.1c0-1.2-0.2-2.3-0.6-3.3c-0.4-1-0.9-2-1.6-2.8c-0.7-0.8-1.6-1.4-2.6-1.9
       		c-1-0.5-2.2-0.7-3.4-0.7c-1.3,0-2.4,0.2-3.4,0.7c-1,0.5-1.9,1.1-2.6,1.9c-0.7,0.8-1.3,1.7-1.6,2.8c-0.4,1-0.6,2.1-0.6,3.3
       		c0,1.2,0.2,2.3,0.6,3.3c0.4,1,0.9,2,1.6,2.7c0.7,0.8,1.6,1.4,2.6,1.9c1,0.5,2.2,0.7,3.4,0.7c1.3,0,2.4-0.2,3.4-0.7
       		c1-0.5,1.9-1.1,2.6-1.9c0.7-0.8,1.3-1.7,1.6-2.7C72.4,27.4,72.5,26.3,72.5,25.1z"/>
-      	<path class="ld-a" fill="#39C0C4" d="M78.2,35H76l8.6-19.8h2L95.1,35h-2.2l-2.2-5.2H80.4L78.2,35z M81.1,27.9h8.7l-4.4-10.5L81.1,27.9z"/>
-      	<path class="ld-d" fill="#39C0C4" d="M98,15.2h6.6c1.2,0,2.5,0.2,3.7,0.6c1.2,0.4,2.4,1,3.4,1.9c1,0.8,1.8,1.9,2.4,3.1s0.9,2.7,0.9,4.3
+          <path class="ld-a" fill="#39C0C4" d="M78.2,35H76l8.6-19.8h2L95.1,35h-2.2l-2.2-5.2H80.4L78.2,35z M81.1,27.9h8.7l-4.4-10.5L81.1,27.9z"/>
+          <path
+            class="ld-d"
+            fill="#39C0C4"
+            d="M98,15.2h6.6c1.2,0,2.5,0.2,3.7,0.6c1.2,0.4,2.4,1,3.4,1.9c1,0.8,1.8,1.9,2.4,3.1s0.9,2.7,0.9,4.3
       		c0,1.7-0.3,3.1-0.9,4.3s-1.4,2.3-2.4,3.1c-1,0.8-2.1,1.5-3.4,1.9c-1.2,0.4-2.5,0.6-3.7,0.6H98V15.2z M100,33.2h4
       		c1.5,0,2.8-0.2,3.9-0.7c1.1-0.5,2-1.1,2.8-1.8c0.7-0.8,1.3-1.6,1.6-2.6s0.5-2,0.5-3c0-1-0.2-2-0.5-3c-0.4-1-0.9-1.8-1.6-2.6
       		c-0.7-0.8-1.6-1.4-2.8-1.8c-1.1-0.5-2.4-0.7-3.9-0.7h-4V33.2z"/>
-      	<path class="ld-i" fill="#39C0C4" d="M121.2,35h-2V15.2h2V35z"/>
-      	<path class="ld-n" fill="#39C0C4" d="M140.5,32.1L140.5,32.1l0.1-16.9h2V35h-2.5l-11.5-17.1h-0.1V35h-2V15.2h2.5L140.5,32.1z"/>
-      	<path class="ld-g" fill="#39C0C4" d="M162.9,18.8c-0.7-0.7-1.5-1.3-2.5-1.7c-1-0.4-2-0.6-3.3-0.6c-1.3,0-2.4,0.2-3.4,0.7s-1.9,1.1-2.6,1.9
+          <path class="ld-i" fill="#39C0C4" d="M121.2,35h-2V15.2h2V35z"/>
+          <path class="ld-n" fill="#39C0C4" d="M140.5,32.1L140.5,32.1l0.1-16.9h2V35h-2.5l-11.5-17.1h-0.1V35h-2V15.2h2.5L140.5,32.1z"/>
+          <path
+            class="ld-g"
+            fill="#39C0C4"
+            d="M162.9,18.8c-0.7-0.7-1.5-1.3-2.5-1.7c-1-0.4-2-0.6-3.3-0.6c-1.3,0-2.4,0.2-3.4,0.7s-1.9,1.1-2.6,1.9
       		c-0.7,0.8-1.3,1.7-1.6,2.8c-0.4,1-0.6,2.1-0.6,3.3c0,1.2,0.2,2.3,0.6,3.3c0.4,1,0.9,2,1.6,2.7c0.7,0.8,1.6,1.4,2.6,1.9
       		s2.2,0.7,3.4,0.7c1.1,0,2.1-0.1,3.1-0.4c0.9-0.2,1.7-0.5,2.3-0.9v-6h-4.6v-1.8h6.6v9c-1.1,0.7-2.2,1.1-3.5,1.5
       		c-1.3,0.3-2.5,0.5-3.9,0.5c-1.5,0-2.9-0.3-4.1-0.8s-2.4-1.2-3.3-2.2c-0.9-0.9-1.6-2-2.1-3.3s-0.8-2.7-0.8-4.2s0.3-2.9,0.8-4.2
       		c0.5-1.3,1.2-2.4,2.2-3.3c0.9-0.9,2-1.6,3.3-2.2c1.3-0.5,2.6-0.8,4.1-0.8c1.6,0,3,0.2,4.1,0.7s2.2,1.1,3,2L162.9,18.8z"/>
-      </g>
+        </g>
       </svg>
-      <svg width='182px' height='182px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-ripple"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><g> <animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="0s" keyTimes="0;0.33;1" values="1;1;0"></animate><circle cx="50" cy="50" r="40" stroke="#eeeeee" fill="none" stroke-width="2" stroke-linecap="round"><animate attributeName="r" dur="4s" repeatCount="indefinite" begin="0s" keyTimes="0;0.33;1" values="0;22;44"></animate></circle></g><g><animate attributeName="opacity" dur="4s" repeatCount="indefinite" begin="2s" keyTimes="0;0.33;1" values="1;1;0"></animate><circle cx="50" cy="50" r="40" stroke="#eeeeee" fill="none" stroke-width="2" stroke-linecap="round"><animate attributeName="r" dur="4s" repeatCount="indefinite" begin="2s" keyTimes="0;0.33;1" values="0;22;44"></animate></circle></g></svg>
+      <svg width='182px' height='182px' xmlns="http://www.w3.org/2000/svg" viewbox="0 0 100 100" preserveaspectratio="xMidYMid" class="uil-ripple">
+        <rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect>
+        <g>
+          <animate attributename="opacity" dur="4s" repeatcount="indefinite" begin="0s" keytimes="0;0.33;1" values="1;1;0"></animate>
+          <circle cx="50" cy="50" r="40" stroke="#eeeeee" fill="none" stroke-width="2" stroke-linecap="round">
+            <animate attributename="r" dur="4s" repeatcount="indefinite" begin="0s" keytimes="0;0.33;1" values="0;22;44"></animate>
+          </circle>
+        </g>
+        <g>
+          <animate attributename="opacity" dur="4s" repeatcount="indefinite" begin="2s" keytimes="0;0.33;1" values="1;1;0"></animate>
+          <circle cx="50" cy="50" r="40" stroke="#eeeeee" fill="none" stroke-width="2" stroke-linecap="round">
+            <animate attributename="r" dur="4s" repeatcount="indefinite" begin="2s" keytimes="0;0.33;1" values="0;22;44"></animate>
+          </circle>
+        </g>
+      </svg>
     </div>
 
     <main>
-        <!-- Header v1 -->
-        <header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance" data-header-fix-moment="1">
-            <div class="u-header__section g-transition-0_3 g-py-12" data-header-fix-moment-exclude="g-py-12" data-header-fix-moment-classes="g-theme-bg-black-v1-opacity-0_8 g-py-7">
-                <nav class="navbar navbar-expand-lg g-py-0">
-                    <div class="container g-pos-rel">
-                        <!-- Logo -->
-                        <a href="#!" class="js-go-to navbar-brand u-header__logo" data-type="static">
+      <!-- Header v1 -->
+      <header id="js-header" class="u-header u-header--sticky-top u-header--change-appearance" data-header-fix-moment="1">
+        <div class="u-header__section g-transition-0_3 g-py-12" data-header-fix-moment-exclude="g-py-12" data-header-fix-moment-classes="g-theme-bg-black-v1-opacity-0_8 g-py-7">
+          <nav class="navbar navbar-expand-lg g-py-0">
+            <div class="container g-pos-rel">
+              <!-- Logo -->
+              <a href="#!" class="js-go-to navbar-brand u-header__logo" data-type="static">
                 <img class="u-header__logo-img u-header__logo-img--main g-width-130" src="assets/img/logo.png" alt="Image description">
               </a>
-                        <!-- End Logo -->
+              <!-- End Logo -->
 
-                        <!-- Navigation -->
-                        <div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar">
-                            <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-font-weight-700 g-font-size-11 g-pt-20 g-pt-0--lg ml-auto">
-                                <li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg active">
-                                    <a href="#masterslider" class="nav-link p-0"><%=__('menu1')%><span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                                    <a href="#intro" class="nav-link p-0"><%=__('menu2')%></a>
-                                </li>
-                                <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                                    <a href="#apartments" class="nav-link p-0"><%=__('menu3')%></a>
-                                </li>
-                                <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                                    <a href="#gallery" class="nav-link p-0"><%=__('menu4')%></a>
-                                </li>
-                                <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                                    <a href="#contact" class="nav-link p-0"><%=__('menu5')%></a>
-                                </li>
-                                <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
-                                    <a href="/<%=__('menu6')%>" class="nav-link p-0"><%=__('menu6')%></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- End Navigation -->
+              <!-- Navigation -->
+              <div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar">
+                <ul id="js-scroll-nav" class="navbar-nav text-uppercase g-font-weight-700 g-font-size-11 g-pt-20 g-pt-0--lg ml-auto">
+                  <li class="nav-item g-mr-15--lg g-mb-7 g-mb-0--lg active">
+                    <a href="#masterslider" class="nav-link p-0"><%=__('menu1')%>
+                      <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#intro" class="nav-link p-0"><%=__('menu2')%></a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#apartments" class="nav-link p-0"><%=__('menu3')%></a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#gallery" class="nav-link p-0"><%=__('menu4')%></a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="#contact" class="nav-link p-0"><%=__('menu5')%></a>
+                  </li>
+                  <li class="nav-item g-mx-15--lg g-mb-7 g-mb-0--lg">
+                    <a href="/<%=__('menu6')%>" class="nav-link p-0"><%=__('menu6')%></a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Navigation -->
 
-                        <!-- Responsive Toggle Button -->
-                        <button class="navbar-toggler btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-20 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
+              <!-- Responsive Toggle Button -->
+              <button class="navbar-toggler btn g-line-height-1 g-brd-none g-pa-0 g-pos-abs g-top-20 g-right-0" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navBar" data-toggle="collapse" data-target="#navBar">
                 <span class="hamburger hamburger--slider">
                   <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                   </span>
                 </span>
               </button>
-                        <!-- End Responsive Toggle Button -->
-                    </div>
-                </nav>
+              <!-- End Responsive Toggle Button -->
             </div>
-        </header>
-        <!-- End Header v1 -->
+          </nav>
+        </div>
+      </header>
+      <!-- End Header v1 -->
 
-        <!-- Main Slider -->
-        <div class="master-slider ms-skin-minimal" id="masterslider">
+      <!-- Main Slider -->
+      <div class="master-slider ms-skin-minimal" id="masterslider">
 
-            <div class="ms-slide">
-                <img src="assets/img/blank.gif" alt="Image description" data-src="assets/img/palazzo/slideshow1920x1280_1.jpg">
+        <div class="ms-slide">
+          <img src="assets/img/blank.gif" alt="Image description" data-src="assets/img/palazzo/slideshow1920x1280_1.jpg">
 
-                <h3 class="ms-layer text-uppercase g-pos-rel g-line-height-1 g-font-weight-700 g-font-size-45 g-font-size-75--lg g-font-secondary g-color-white g-mb-10" data-type="text" data-delay="10" data-effect="skewright(50, 340)" data-ease="easeOutExpo" data-duration="2200"><%=__('slideshow1_title')%></h3>
+          <h3
+            class="ms-layer text-uppercase g-pos-rel g-line-height-1 g-font-weight-700 g-font-size-45 g-font-size-75--lg g-font-secondary g-color-white g-mb-10"
+            data-type="text"
+            data-delay="10"
+            data-effect="skewright(50, 340)"
+            data-ease="easeOutExpo"
+            data-duration="2200"><%=__('slideshow1_title')%></h3>
 
-                <div class="ms-layer g-pos-rel g-line-height-1_2 g-max-width-550" data-type="text" data-delay="30" data-effect="rotate3dbottom(100, 0, 0, 70)" data-ease="easeOutExpo" data-duration="2300">
-                    <p class="g-mb-20 g-font-size-default g-font-size-18--md g-color-white-opacity-0_8"><%=__('slideshow1_sub')%></p>
-                    <a class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" href="#!"><%=__('slideshow1_button')%></a>
-                </div>
+          <div class="ms-layer g-pos-rel g-line-height-1_2 g-max-width-550" data-type="text" data-delay="30" data-effect="rotate3dbottom(100, 0, 0, 70)" data-ease="easeOutExpo" data-duration="2300">
+            <p class="g-mb-20 g-font-size-default g-font-size-18--md g-color-white-opacity-0_8"><%=__('slideshow1_sub')%></p>
+            <a class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" href="#!"><%=__('slideshow1_button')%></a>
+          </div>
 
-                <img class="ms-thumb" src="assets/img/palazzo/slideshow1920x1280_1.jpg" alt="Image description">
+          <img class="ms-thumb" src="assets/img/palazzo/slideshow1920x1280_1.jpg" alt="Image description">
+        </div>
+
+        <div class="ms-slide">
+          <img src="assets/img/blank.gif" alt="Image description" data-src="assets/img/generics/slideshow1920x1280_2.jpg">
+
+          <h3
+            class="ms-layer text-uppercase g-pos-rel g-line-height-1 g-font-weight-700 g-font-size-45 g-font-size-75--lg g-font-secondary g-color-white g-mb-10"
+            data-type="text"
+            data-delay="10"
+            data-effect="skewright(50, 340)"
+            data-ease="easeOutExpo"
+            data-duration="2200"><%=__('slideshow2_title')%></h3>
+
+          <div class="ms-layer g-pos-rel g-line-height-1_2 g-max-width-550" data-type="text" data-delay="30" data-effect="rotate3dbottom(100, 0, 0, 70)" data-ease="easeOutExpo" data-duration="2300">
+            <p class="g-mb-20 g-font-size-default g-font-size-18--md g-color-white-opacity-0_8"><%=__('slideshow2_sub')%></p>
+            <a class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" href="#gallery"><%=__('slideshow2_button')%></a>
+          </div>
+
+          <img class="ms-thumb" src="assets/img/generics/slideshow1920x1280_2.jpg" alt="Image description">
+        </div>
+
+        <div class="ms-slide">
+          <img src="assets/img/blank.gif" alt="Image description" data-src="assets/img/generics/slideshow1920x1280_3.jpg">
+
+          <h3
+            class="ms-layer text-uppercase g-pos-rel g-line-height-1 g-font-weight-700 g-font-size-45 g-font-size-75--lg g-font-secondary g-color-white g-mb-10"
+            data-type="text"
+            data-delay="10"
+            data-effect="skewright(50, 340)"
+            data-ease="easeOutExpo"
+            data-duration="2200"><%=__('slideshow3_title')%></h3>
+
+          <div class="ms-layer g-pos-rel g-line-height-1_2 g-max-width-550" data-type="text" data-delay="30" data-effect="rotate3dbottom(100, 0, 0, 70)" data-ease="easeOutExpo" data-duration="2300">
+            <p class="g-mb-20 g-font-size-default g-font-size-18--md g-color-white-opacity-0_8"><%=__('slideshow3_sub')%></p>
+            <a class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" href="#contact"><%=__('slideshow3_button')%></a>
+          </div>
+
+          <img class="ms-thumb" src="assets/img/generics/slideshow1920x1280_3.jpg" alt="Image description">
+        </div>
+
+        <div class="ms-slide">
+          <img src="assets/img/blank.gif" alt="Image description" data-src="assets/img/generics/slideshow1920x1280_4.jpg">
+
+          <h3
+            class="ms-layer text-uppercase g-pos-rel g-line-height-1 g-font-weight-700 g-font-size-45 g-font-size-75--lg g-font-secondary g-color-white g-mb-10"
+            data-type="text"
+            data-delay="10"
+            data-effect="skewright(50, 340)"
+            data-ease="easeOutExpo"
+            data-duration="2200">
+            <%-__('slideshow4_title')%>
+            </h3>
+
+            <div class="ms-layer g-pos-rel g-line-height-1_2 g-max-width-550" data-type="text" data-delay="30" data-effect="rotate3dbottom(100, 0, 0, 70)" data-ease="easeOutExpo" data-duration="2300">
+              <p class="g-mb-20 g-font-size-default g-font-size-18--md g-color-white-opacity-0_8"><%=__('slideshow4_sub')%></p>
+              <a class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" href="#contact"><%=__('slideshow4_button')%></a>
             </div>
 
-            <div class="ms-slide">
-                <img src="assets/img/blank.gif" alt="Image description" data-src="assets/img/generics/slideshow1920x1280_2.jpg">
-
-                <h3 class="ms-layer text-uppercase g-pos-rel g-line-height-1 g-font-weight-700 g-font-size-45 g-font-size-75--lg g-font-secondary g-color-white g-mb-10" data-type="text" data-delay="10" data-effect="skewright(50, 340)" data-ease="easeOutExpo" data-duration="2200"><%=__('slideshow2_title')%></h3>
-
-                <div class="ms-layer g-pos-rel g-line-height-1_2 g-max-width-550" data-type="text" data-delay="30" data-effect="rotate3dbottom(100, 0, 0, 70)" data-ease="easeOutExpo" data-duration="2300">
-                    <p class="g-mb-20 g-font-size-default g-font-size-18--md g-color-white-opacity-0_8"><%=__('slideshow2_sub')%></p>
-                    <a class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" href="#!"><%=__('slideshow2_button')%></a>
-                </div>
-
-                <img class="ms-thumb" src="assets/img/generics/slideshow1920x1280_2.jpg" alt="Image description">
-            </div>
-
-            <div class="ms-slide">
-                <img src="assets/img/blank.gif" alt="Image description" data-src="assets/img/generics/slideshow1920x1280_3.jpg">
-
-                <h3 class="ms-layer text-uppercase g-pos-rel g-line-height-1 g-font-weight-700 g-font-size-45 g-font-size-75--lg g-font-secondary g-color-white g-mb-10" data-type="text" data-delay="10" data-effect="skewright(50, 340)" data-ease="easeOutExpo" data-duration="2200"><%=__('slideshow3_title')%></h3>
-
-                <div class="ms-layer g-pos-rel g-line-height-1_2 g-max-width-550" data-type="text" data-delay="30" data-effect="rotate3dbottom(100, 0, 0, 70)" data-ease="easeOutExpo" data-duration="2300">
-                    <p class="g-mb-20 g-font-size-default g-font-size-18--md g-color-white-opacity-0_8"><%=__('slideshow3_sub')%></p>
-                    <a class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" href="#!"><%=__('slideshow3_button')%></a>
-                </div>
-
-                <img class="ms-thumb" src="assets/img/generics/slideshow1920x1280_3.jpg" alt="Image description">
-            </div>
-
-            <div class="ms-slide">
-                <img src="assets/img/blank.gif" alt="Image description" data-src="assets/img/generics/slideshow1920x1280_4.jpg">
-
-                <h3 class="ms-layer text-uppercase g-pos-rel g-line-height-1 g-font-weight-700 g-font-size-45 g-font-size-75--lg g-font-secondary g-color-white g-mb-10" data-type="text" data-delay="10" data-effect="skewright(50, 340)" data-ease="easeOutExpo" data-duration="2200"><%-__('slideshow4_title')%></h3>
-
-                <div class="ms-layer g-pos-rel g-line-height-1_2 g-max-width-550" data-type="text" data-delay="30" data-effect="rotate3dbottom(100, 0, 0, 70)" data-ease="easeOutExpo" data-duration="2300">
-                    <p class="g-mb-20 g-font-size-default g-font-size-18--md g-color-white-opacity-0_8"><%=__('slideshow4_sub')%></p>
-                    <a class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" href="#!"><%=__('slideshow4_button')%></a>
-                </div>
-
-                <img class="ms-thumb" src="assets/img/generics/slideshow1920x1280_4.jpg" alt="Image description">
-            </div>
+            <img class="ms-thumb" src="assets/img/generics/slideshow1920x1280_4.jpg" alt="Image description">
+          </div>
         </div>
         <!-- End Main Slider -->
 
         <!--///////////////////////////////////////////////////////////////////////-->
-        <!-- Section 2 Content -->
+        <!-- Body Content Starts Here -->
         <!--///////////////////////////////////////////////////////////////////////-->
         <section id="intro" class="g-pt-90">
           <div class="container g-max-width-780 text-center g-mb-50">
-              <div class="u-heading-v8-2 g-mb-40">
-                  <h2 class="text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-40 mb-0">
-                      <strong class="h6 d-inline-block g-theme-bg-black-v1 g-color-white g-mb-20"><%-__('section2_box')%></strong>
-                      <br><span class="g-color-primary"><%=__('section2_title1')%></span> <%=__('section2_title2')%>
-                  </h2>
+            <div class="u-heading-v8-2 g-mb-40">
+              <h2 class="text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-40 mb-0">
+                <strong class="h6 d-inline-block g-theme-bg-black-v1 g-color-white g-mb-20">
+                  <%-__('section2_box')%>
+                  </strong>
+                  <br>
+                  <span class="g-color-primary"><%=__('section2_title1')%></span>
+                  <%=__('section2_title2')%>
+                </h2>
               </div>
 
               <p class="mb-0"><%=__('section2_text')%></p>
-          </div>
-        </section>
-        <!-- End Section 2 Content -->
+            </div>
+          </section>
+          <!-- End Section 2 Content -->
 
-        <!-- Section Content -->
-        <section id="apartments" class="row no-gutters">
+          <!-- Section Content -->
+          <section id="apartments" class="row no-gutters">
             <div class="col-lg-3 text-center g-bg-primary g-py-30 g-px-10">
-                <div class="u-heading-v8-2 g-mb-30">
-                    <h2 class="text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-40 mb-0">
-                        <strong class="h6 d-inline-block g-theme-bg-black-v1 g-color-white g-mb-20"><%=__('section3_box')%></strong>
-                        <br><span class="g-color-white"><%=__('section3_title1')%></span> <%=__('section3_title2')%>
-                    </h2>
-                </div>
+              <div class="u-heading-v8-2 g-mb-30">
+                <h2 class="text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-40 mb-0">
+                  <strong class="h6 d-inline-block g-theme-bg-black-v1 g-color-white g-mb-20"><%=__('section3_box')%></strong>
+                  <br>
+                  <span class="g-color-white"><%=__('section3_title1')%></span>
+                  <%=__('section3_title2')%>
+                </h2>
+              </div>
 
-                <p class="g-color-white-opacity-0_8 g-px-30 mb-0">
-                  <%=__('section3_text')%></p>
+              <p class="g-color-white-opacity-0_8 g-px-30 mb-0">
+                <%=__('section3_text')%></p>
             </div>
 
             <div class="col-lg-9">
-                <div class="js-carousel u-carousel-v5" data-infinite="true" data-slides-scroll="true" data-slides-show="3" data-arrows-classes="u-arrow-v1 g-pos-abs g-top-100 g-width-45 g-height-45 g-font-size-default g-color-white g-bg-primary g-theme-bg-black-v1--hover"
-                    data-arrow-left-classes="fa fa-chevron-left g-left-0" data-arrow-right-classes="fa fa-chevron-right g-right-0" data-responsive='[{
+              <div
+                class="js-carousel u-carousel-v5"
+                data-infinite="true"
+                data-slides-scroll="true"
+                data-slides-show="3"
+                data-arrows-classes="u-arrow-v1 g-pos-abs g-top-100 g-width-45 g-height-45 g-font-size-default g-color-white g-bg-primary g-theme-bg-black-v1--hover"
+                data-arrow-left-classes="fa fa-chevron-left g-left-0"
+                data-arrow-right-classes="fa fa-chevron-right g-right-0"
+                data-responsive='[{
                  "breakpoint": 1200,
                  "settings": {
                    "slidesToShow": 2
@@ -242,612 +305,684 @@
                  }
                }]'>
 
-                    <div class="js-slide">
-                        <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
-                            <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
-                                <img class="img-fluid w-100" src="assets/img/palazzo/apart_2.jpg" alt="Image description">
-                            </div>
-
-                            <!-- Article Content -->
-                            <div class="g-pa-25 text-center">
-
-                                <!-- Article Title -->
-                                <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
-                                    <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Aretusa</a>
-                                </h3>
-                                <!-- End Article Title -->
-                                <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room1_text')%></p>
-
-                                <!-- Article Icons -->
-                                <div class="g-overflow-hidden g-mb-15">
-                                    <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
-                                        <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 4
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 2
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 130 <%=__('room_size')%>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End Article Icons -->
-
-                            </div>
-                            <!-- End Article Content -->
-
-
-                        </article>
+                <div class="js-slide">
+                  <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
+                    <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
+                      <img class="img-fluid w-100" src="assets/img/palazzo/apart_2.jpg" alt="Image description">
                     </div>
 
-                    <div class="js-slide">
-                        <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
-                            <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
-                                <img class="img-fluid w-100" src="assets/img/palazzo/apart_1.jpg" alt="Image description">
-                            </div>
+                    <!-- Article Content -->
+                    <div class="g-pa-25 text-center">
 
-                            <!-- Article Content -->
-                            <div class="g-pa-25 text-center">
+                      <!-- Article Title -->
+                      <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
+                        <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Aretusa</a>
+                      </h3>
+                      <!-- End Article Title -->
+                      <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room1_text')%></p>
 
-                                <!-- Article Title -->
-                                <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
-                                    <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Alfeo</a>
-                                </h3>
-                                <!-- End Article Title -->
-                                <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room4_text')%></p>
+                      <!-- Article Icons -->
+                      <div class="g-overflow-hidden g-mb-15">
+                        <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
+                          <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            4
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            2
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            130
+                            <%=__('room_size')%>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- End Article Icons -->
 
-                                <!-- Article Icons -->
-                                <div class="g-overflow-hidden g-mb-15">
-                                    <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
-                                        <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 4
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 2
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 130 <%=__('room_size')%>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End Article Icons -->
-
-                            </div>
-                            <!-- End Article Content -->
-
-
-                        </article>
                     </div>
+                    <!-- End Article Content -->
 
-                    <div class="js-slide">
-                        <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
-                            <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
-                                <img class="img-fluid w-100" src="assets/img/palazzo/apart_2.jpg" alt="Image description">
-                            </div>
-
-                            <!-- Article Content -->
-                            <div class="g-pa-25 text-center">
-
-                                <!-- Article Title -->
-                                <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
-                                    <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Aretusa</a>
-                                </h3>
-                                <!-- End Article Title -->
-                                <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room3_text')%></p>
-
-                                <!-- Article Icons -->
-                                <div class="g-overflow-hidden g-mb-15">
-                                    <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
-                                        <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 4
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 2
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 130 <%=__('room_size')%>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End Article Icons -->
-                            </div>
-                            <!-- End Article Content -->
-
-                        </article>
-                    </div>
-
-                    <div class="js-slide">
-                        <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
-                            <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
-                                <img class="img-fluid w-100" src="assets/img/palazzo/apart_1.jpg" alt="Image description">
-                            </div>
-
-                            <!-- Article Content -->
-                            <div class="g-pa-25 text-center">
-
-                                <!-- Article Title -->
-                                <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
-                                    <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Alfeo</a>
-                                </h3>
-                                <!-- End Article Title -->
-                                <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room4_text')%></p>
-
-                                <!-- Article Icons -->
-                                <div class="g-overflow-hidden g-mb-15">
-                                    <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
-                                        <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 4
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 2
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 130 <%=__('room_size')%>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End Article Icons -->
-                            </div>
-                            <!-- End Article Content -->
-
-
-                        </article>
-                    </div>
-
-                    <div class="js-slide">
-                        <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
-                            <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
-                                <img class="img-fluid w-100" src="assets/img/palazzo/apart_1.jpg" alt="Image description">
-                            </div>
-
-                            <!-- Article Content -->
-                            <div class="g-pa-25 text-center">
-
-                                <!-- Article Title -->
-                                <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
-                                    <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Alfeo</a>
-                                </h3>
-                                <!-- End Article Title -->
-                                <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room5_text')%></p>
-
-                                <!-- Article Icons -->
-                                <div class="g-overflow-hidden g-mb-15">
-                                    <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
-                                        <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 4
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 2
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 130 <%=__('room_size')%>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End Article Icons -->
-                            </div>
-                            <!-- End Article Content -->
-
-
-                        </article>
-                    </div>
-
-                    <div class="js-slide">
-                        <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
-                            <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
-                                <img class="img-fluid w-100" src="assets/img/palazzo/apart_1.jpg" alt="Image description">
-                            </div>
-
-                            <!-- Article Content -->
-                            <div class="g-pa-25 text-center">
-
-                                <!-- Article Title -->
-                                <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
-                                    <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Alfeo</a>
-                                </h3>
-                                <!-- End Article Title -->
-                                <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room6_text')%></p>
-
-                                <!-- Article Icons -->
-                                <div class="g-overflow-hidden g-mb-15">
-                                    <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
-                                        <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 4
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 2
-                                        </li>
-                                        <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
-                                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i> 130 <%=__('room_size')%>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End Article Icons -->
-                            </div>
-                            <!-- End Article Content -->
-
-
-                        </article>
-                    </div>
-
+                  </article>
                 </div>
+
+                <div class="js-slide">
+                  <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
+                    <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
+                      <img class="img-fluid w-100" src="assets/img/palazzo/apart_1.jpg" alt="Image description">
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="g-pa-25 text-center">
+
+                      <!-- Article Title -->
+                      <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
+                        <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Alfeo</a>
+                      </h3>
+                      <!-- End Article Title -->
+                      <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room4_text')%></p>
+
+                      <!-- Article Icons -->
+                      <div class="g-overflow-hidden g-mb-15">
+                        <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
+                          <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            4
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            2
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            130
+                            <%=__('room_size')%>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- End Article Icons -->
+
+                    </div>
+                    <!-- End Article Content -->
+
+                  </article>
+                </div>
+
+                <div class="js-slide">
+                  <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
+                    <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
+                      <img class="img-fluid w-100" src="assets/img/palazzo/apart_2.jpg" alt="Image description">
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="g-pa-25 text-center">
+
+                      <!-- Article Title -->
+                      <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
+                        <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Aretusa</a>
+                      </h3>
+                      <!-- End Article Title -->
+                      <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room3_text')%></p>
+
+                      <!-- Article Icons -->
+                      <div class="g-overflow-hidden g-mb-15">
+                        <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
+                          <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            4
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            2
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            130
+                            <%=__('room_size')%>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- End Article Icons -->
+                    </div>
+                    <!-- End Article Content -->
+
+                  </article>
+                </div>
+
+                <div class="js-slide">
+                  <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
+                    <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
+                      <img class="img-fluid w-100" src="assets/img/palazzo/apart_1.jpg" alt="Image description">
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="g-pa-25 text-center">
+
+                      <!-- Article Title -->
+                      <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
+                        <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Alfeo</a>
+                      </h3>
+                      <!-- End Article Title -->
+                      <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room4_text')%></p>
+
+                      <!-- Article Icons -->
+                      <div class="g-overflow-hidden g-mb-15">
+                        <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
+                          <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            4
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            2
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            130
+                            <%=__('room_size')%>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- End Article Icons -->
+                    </div>
+                    <!-- End Article Content -->
+
+                  </article>
+                </div>
+
+                <div class="js-slide">
+                  <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
+                    <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
+                      <img class="img-fluid w-100" src="assets/img/palazzo/apart_1.jpg" alt="Image description">
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="g-pa-25 text-center">
+
+                      <!-- Article Title -->
+                      <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
+                        <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Alfeo</a>
+                      </h3>
+                      <!-- End Article Title -->
+                      <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room5_text')%></p>
+
+                      <!-- Article Icons -->
+                      <div class="g-overflow-hidden g-mb-15">
+                        <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
+                          <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            4
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            2
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            130
+                            <%=__('room_size')%>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- End Article Icons -->
+                    </div>
+                    <!-- End Article Content -->
+
+                  </article>
+                </div>
+
+                <div class="js-slide">
+                  <article class="u-shadow-v26 g-parent g-theme-bg-black-v1 g-bg-primary--hover g-transition-0_2 g-transition--ease-in">
+                    <div class="u-bg-overlay g-bg-black-opacity-0_1--after">
+                      <img class="img-fluid w-100" src="assets/img/palazzo/apart_1.jpg" alt="Image description">
+                    </div>
+
+                    <!-- Article Content -->
+                    <div class="g-pa-25 text-center">
+
+                      <!-- Article Title -->
+                      <h3 class="text-uppercase g-font-weight-700 g-font-size-16 g-mb-20">
+                        <a class="g-text-underline--none--hover g-font-secondary g-color-white" href="#!">Alfeo</a>
+                      </h3>
+                      <!-- End Article Title -->
+                      <p class="g-color-white-opacity-0_8 g-mb-25"><%=__('room6_text')%></p>
+
+                      <!-- Article Icons -->
+                      <div class="g-overflow-hidden g-mb-15">
+                        <ul class="list-inline text-center g-font-size-12 g-color-white g-brd-top g-brd-bottom g-brd-gray-light-v3 g-mx-minus-25">
+                          <li class="list-inline-item g-width-30x g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-022 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            4
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-hotel-restaurant-158 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            2
+                          </li>
+                          <li class="list-inline-item g-width-30x g-brd-left g-brd-gray-light-v3 g-pa-12-5-7 mx-0 g-my-5">
+                            <i class="icon-real-estate-017 align-middle u-line-icon-pro g-font-size-18 g-mr-5"></i>
+                            130
+                            <%=__('room_size')%>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- End Article Icons -->
+                    </div>
+                    <!-- End Article Content -->
+
+                  </article>
+                </div>
+
+              </div>
             </div>
-        </section>
-        <!-- End Section Content -->
+          </section>
+          <!-- End Section Content -->
 
-        <!-- Section Content -->
-        <section id="gallery" class="g-pt-90">
+          <!-- Section Content -->
+          <section id="gallery" class="g-pt-90">
             <div class="container g-max-width-780 text-center g-mb-70">
-                <div class="u-heading-v8-2 g-mb-40">
-                    <h2 class="text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-40 mb-0">
-                        <strong class="h6 d-inline-block g-theme-bg-black-v1 g-color-white g-mb-20"><%=__('section4_box')%></strong>
-                        <br><span class="g-color-primary">Interesting</span> shots
-                    </h2>
-                </div>
+              <div class="u-heading-v8-2 g-mb-40">
+                <h2 class="text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-40 mb-0">
+                  <strong class="h6 d-inline-block g-theme-bg-black-v1 g-color-white g-mb-20"><%=__('section4_box')%></strong>
+                  <br>
+                  <span class="g-color-primary">Interesting</span>
+                  shots
+                </h2>
+              </div>
 
-                <p class="mb-0">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor. Vivamus a fringilla lorem, vel faucibus ante. Nunc ullamcorper, justo a iaculis elementum, enim orci viverra eros, fringilla porttitor lorem eros vel
-                    odio.</p>
+              <p class="mb-0">Sed feugiat porttitor nunc, non dignissim ipsum vestibulum in. Donec in blandit dolor. Vivamus a fringilla lorem, vel faucibus ante. Nunc ullamcorper, justo a iaculis elementum, enim orci viverra eros, fringilla porttitor lorem eros vel odio.</p>
             </div>
 
             <!--CubePortfolio-->
             <div id="js-filters-full-width" class="cbp-l-filters-alignCenter">
-              <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
-                  All <div class="cbp-filter-counter"></div>
-              </div> /
-              <div data-filter=".motion" class="cbp-filter-item-active cbp-filter-item">
-                  Siracusa <div class="cbp-filter-counter"></div>
-              </div> /
-              <div data-filter=".identity" class="cbp-filter-item">
-                  Alfeo &#38; Aretusa <div class="cbp-filter-counter"></div>
-              </div> /
-              <div data-filter=".web-design" class="cbp-filter-item">
-                  Alfeo &#38; Aretusa <div class="cbp-filter-counter"></div>
-              </div> /
-              <div data-filter=".graphic" class="cbp-filter-item">
-                  Alfeo &#38; Aretusa <div class="cbp-filter-counter"></div>
+              <div data-filter=".sr" class="cbp-filter-item cbp-filter-item-active ">
+                Siracusa
+                <div class="cbp-filter-counter"></div>
               </div>
-          </div>
+              /
+              <div data-filter="*" class="cbp-filter-item">
+                <%=__('group_1')%>
+                <div class="cbp-filter-counter"></div>
+              </div>
+              /
+              <div data-filter=".aptA" class="cbp-filter-item">
+                Alfeo &#38; Aretusa
+                <div class="cbp-filter-counter"></div>
+              </div>
+              /
+              <div data-filter=".aptB" class="cbp-filter-item">
+                Alfeo &#38; Aretusa
+                <div class="cbp-filter-counter"></div>
+              </div>
+              /
+              <div data-filter=".aptC" class="cbp-filter-item">
+                Alfeo &#38; Aretusa
+                <div class="cbp-filter-counter"></div>
+              </div>
+            </div>
 
-    <div id="js-grid-full-width" class="cbp">
-        <div class="cbp-item identity logos">
-            <a href="http://scriptpie.com/cubeportfolio/img/?i=1200x900/89ca22" class="cbp-caption cbp-lightbox" data-title="Dashboard<br>by Paul Flavius Nechita">
-                <div class="cbp-caption-defaultWrap">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g380x360_1.jpg" alt="" width="380" height="360">
-                </div>
-                <div class="cbp-caption-activeWrap">
+            <div id="js-grid-full-width" class="cbp">
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g1_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="Dashboard<br>by Paul Flavius Nechita">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g1_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title">Dashboard</div>
-                            <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
-                        </div>
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">Dashboard</div>
+                        <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
+                      </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item web-design">
-            <a href="http://scriptpie.com/cubeportfolio/img/?i=1200x900/76aa9a" class="cbp-caption cbp-lightbox" data-title="Client chat app WIP<br>by Paul Flavius Nechita">
-                <div class="cbp-caption-defaultWrap">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="http://scriptpie.com/cubeportfolio/img/?i=380x360/d6f179" alt="" width="380" height="360">
-                </div>
-                <div class="cbp-caption-activeWrap">
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g2_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="Client chat app WIP<br>by Paul Flavius Nechita">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g2_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title">Client chat app WIP</div>
-                            <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
-                        </div>
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">Client chat app WIP</div>
+                        <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
+                      </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item motion identity">
-            <a href="assets/img/palazzo/gallery1200_1.jpg" class="cbp-caption cbp-lightbox" data-title="World Clock<br>by Paul Flavius Nechita">
-                <div class="cbp-caption-defaultWrap">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/palazzo/gallery760_1.jpg" alt="" width="760" height="720">
-                </div>
-                <div class="cbp-caption-activeWrap">
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g3_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="Website Lightbox<br>by Paul Flavius Nechita">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g3_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title">World Clock</div>
-                            <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
-                        </div>
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">Website Lightbox</div>
+                        <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
+                      </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item identity graphic">
-            <a href="http://scriptpie.com/cubeportfolio/img/?i=1200x900/2c0110" class="cbp-caption cbp-lightbox" data-title="Website Lightbox<br>by Paul Flavius Nechita">
-                <div class="cbp-caption-defaultWrap">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="http://scriptpie.com/cubeportfolio/img/?i=380x360/cca519" alt="" width="380" height="360">
-                </div>
-                <div class="cbp-caption-activeWrap">
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g4_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="Skateshop Website<br>by Paul Flavius Nechita">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g4_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title">Website Lightbox</div>
-                            <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
-                        </div>
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">Skateshop Website</div>
+                        <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
+                      </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item motion logos">
-            <a href="http://scriptpie.com/cubeportfolio/img/?i=1200x900/701d46" class="cbp-caption cbp-lightbox" data-title="Skateshop Website<br>by Paul Flavius Nechita">
-                <div class="cbp-caption-defaultWrap">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="http://scriptpie.com/cubeportfolio/img/?i=760x360/4a7e96" alt="" width="760" height="360">
-                </div>
-                <div class="cbp-caption-activeWrap">
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g5_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="10 Navigation Bars<br>by Paul Flavius Nechita">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g5_760x360.jpg" alt="" width="760" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title">Skateshop Website</div>
-                            <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
-                        </div>
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">10 Navigation Bars</div>
+                        <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
+                      </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item web-design">
-            <a href="http://scriptpie.com/cubeportfolio/img/?i=1200x900/f2adde" class="cbp-caption cbp-lightbox" data-title="10 Navigation Bars<br>by Paul Flavius Nechita">
-                <div class="cbp-caption-defaultWrap">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="http://scriptpie.com/cubeportfolio/img/?i=380x360/9252e8" alt="" width="380" height="360">
-                </div>
-                <div class="cbp-caption-activeWrap">
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g6_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="To-Do Dashboard<br>by Tiberiu Neamu">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g6_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title">10 Navigation Bars</div>
-                            <div class="cbp-l-caption-desc">by Paul Flavius Nechita</div>
-                        </div>
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">To-Do Dashboard</div>
+                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                      </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item identity motion">
-            <a href="http://scriptpie.com/cubeportfolio/img/?i=1200x900/2ad2f3" class="cbp-caption cbp-lightbox" data-title="To-Do Dashboard<br>by Tiberiu Neamu">
-                <div class="cbp-caption-defaultWrap">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="http://scriptpie.com/cubeportfolio/img/?i=760x720/18931c" alt="" width="760" height="720">
-                </div>
-                <div class="cbp-caption-activeWrap">
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g16_600x900.jpg" class="cbp-caption cbp-lightbox" data-title="Events and  More<br>by Tiberiu Neamu">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g16_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title">To-Do Dashboard</div>
-                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                        </div>
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">Events and More</div>
+                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                      </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item web-design graphic">
-            <a href="http://scriptpie.com/cubeportfolio/img/?i=1200x900/4a2146" class="cbp-caption cbp-lightbox" data-title="Events and  More<br>by Tiberiu Neamu">
-                <div class="cbp-caption-defaultWrap">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="http://scriptpie.com/cubeportfolio/img/?i=380x360/aa6825" alt="" width="380" height="360">
-                </div>
-                <div class="cbp-caption-activeWrap">
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g15_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="WhereTO App<br>by Tiberiu Neamu">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g15_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title">Events and More</div>
-                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                        </div>
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">WhereTO App</div>
+                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                      </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="cbp-item graphic logos">
-            <a href="http://scriptpie.com/cubeportfolio/img/?i=1200x900/c9aaa8" class="cbp-caption cbp-lightbox" data-title="WhereTO App<br>by Tiberiu Neamu">
-                <div class="cbp-caption-defaultWrap">
-                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="http://scriptpie.com/cubeportfolio/img/?i=380x360/694fb2" alt="" width="380" height="360">
-                </div>
-                <div class="cbp-caption-activeWrap">
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g12_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="WhereTO App<br>by Tiberiu Neamu">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g12_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
                     <div class="cbp-l-caption-alignLeft">
-                        <div class="cbp-l-caption-body">
-                            <div class="cbp-l-caption-title">WhereTO App</div>
-                            <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                        </div>
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">WhereTO App</div>
+                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                      </div>
                     </div>
-                </div>
-            </a>
-        </div>
-    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g13_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="WhereTO App<br>by Tiberiu Neamu">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g13_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">WhereTO App</div>
+                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="cbp-item sr">
+                <a href="assets/img/generics/g11_1350x900.jpg" class="cbp-caption cbp-lightbox" data-title="WhereTO App<br>by Tiberiu Neamu">
+                  <div class="cbp-caption-defaultWrap">
+                    <img src="data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" data-cbp-src="assets/img/generics/g11_380x360.jpg" alt="" width="380" height="360">
+                  </div>
+                  <div class="cbp-caption-activeWrap">
+                    <div class="cbp-l-caption-alignLeft">
+                      <div class="cbp-l-caption-body">
+                        <div class="cbp-l-caption-title">WhereTO App</div>
+                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
 
-    <div id="js-loadMore-full-width" class="cbp-l-loadMore-text">
-        <a href="assets/ajax-full-width/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
+            <div id="js-loadMore-full-width" class="cbp-l-loadMore-text">
+              <a href="assets/ajax-full-width/loadMore.html" class="cbp-l-loadMore-link" rel="nofollow">
 
-            <span class="cbp-l-loadMore-defaultText btn btn-lg u-btn-outline-primary u-btn-hover-v1-1 g-mr-10 g-mb-15"><%=__('load_more')%></span>
-            <span class="cbp-l-loadMore-loadingText btn btn-lg u-btn-outline-primary u-btn-hover-v1-1 g-mr-10 g-mb-15"><%=__('loading_more')%></span>
-            <span class="cbp-l-loadMore-noMoreLoading btn btn-lg u-btn-outline-primary u-btn-hover-v1-1 g-mr-10 g-mb-15"><%=__('load_end')%></span>
-        </a>
-    </div>
+                <span class="cbp-l-loadMore-defaultText btn btn-lg u-btn-outline-primary u-btn-hover-v1-1 g-mr-10 g-mb-15"><%=__('load_more')%></span>
+                <span class="cbp-l-loadMore-loadingText btn btn-lg u-btn-outline-primary u-btn-hover-v1-1 g-mr-10 g-mb-15"><%=__('loading_more')%></span>
+                <span class="cbp-l-loadMore-noMoreLoading btn btn-lg u-btn-outline-primary u-btn-hover-v1-1 g-mr-10 g-mb-15"><%=__('load_end')%></span>
+              </a>
+            </div>
             <!--End CubePortfolio-->
 
           </section>
           <!-- End Section Content -->
 
-
-
-        <!-- Footer Start -->
-        <footer class="text-center">
+          <!-- Footer Start -->
+          <footer class="text-center">
             <div id="contact" class="container-fluid g-font-weight-500 g-font-size-16 g-color-white-opacity-0_7">
-                <div class="row">
-                    <div class="col-md-12 col-lg-4 px-0">
-                        <!-- Google (Map) [custom] -->
-                        <div class="g-pos-rel g-height-680">
-                            <div id="gMap1" class="js-g-map g-pos-abs w-100 h-100" data-type="custom" data-lat="37.057774" data-lng="15.293182" data-zoom="12" data-title="Travel" data-styles='[
+              <div class="row">
+                <div class="col-md-12 col-lg-4 px-0">
+                  <!-- Google (Map) [custom] -->
+                  <div class="g-pos-rel g-height-680">
+                    <div
+                      id="gMap1"
+                      class="js-g-map g-pos-abs w-100 h-100"
+                      data-type="custom"
+                      data-lat="37.057774"
+                      data-lng="15.293182"
+                      data-zoom="12"
+                      data-title="Travel"
+                      data-styles='[
                          ["", "", [{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]],
                          ["", "labels", [{"visibility":"on"}]],
                          ["water", "", [{"color":"#bac6cb"}]]
-                       ]' data-pin="true" data-pin-icon="assets/img/pin.png"></div>
-                        </div>
-                        <!-- End Google (Map) [custom] -->
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 d-flex g-bg-primary g-pa-40">
-                        <div class="align-self-center w-100">
-                            <div class="u-heading-v8-2 g-mb-40">
-                                <h2 class="text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-40 mb-0">
-                                    <strong class="h6 d-inline-block g-theme-bg-black-v1 g-color-white g-mb-20"><%=__('section5_box')%></strong>
-                                    <br><span class="g-color-white"><%=__('section5_title1')%></span> <%=__('section5_title2')%>
-                                </h2>
-                            </div>
-
-                            <p class="g-line-height-1_3 g-font-size-16 g-color-white-opacity-0_8 g-mb-45"><%=__('section5_text')%></p>
-
-                            <address class="text-uppercase g-font-size-default g-mb-40">
-                  <div class="g-mb-20">
-                    <%=__('email_text')%>:
-                    <a class="g-color-white" href="mailto:market"><strong>palazzoalfeo@gmail.com</strong></a>
+                       ]'
+                      data-pin="true"
+                      data-pin-icon="assets/img/pin.png"></div>
                   </div>
-
-                  <div class="g-mb-20">
-                    <%=__('phone_text')%>:
-                    <strong class="g-color-white">+39 3207567546 <br/> +39  3288174702</strong>
-                  </div>
-
-                  <div>
-                    <%=__('address_text')%>:
-                    <strong class="g-color-white">Via lungomare Alfeo, 17, 96100 Siracusa, SR</strong>
-                  </div>
-                </address>
-
-                            <ul class="list-inline mb-0">
-                                <li class="list-inline-item g-mr-10">
-                                    <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-twitter"></i></a>
-                                </li>
-                                <li class="list-inline-item g-mr-10">
-                                    <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-pinterest"></i></a>
-                                </li>
-                                <li class="list-inline-item g-mr-10">
-                                    <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-facebook"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!"><i class="fa fa-linkedin"></i></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6 col-lg-4 d-flex g-theme-bg-black-v1 g-pa-40">
-                        <div class="align-self-center w-100">
-                            <div class="u-heading-v8-2 g-mb-60">
-                                <h2 class="h1 text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-26 g-color-white g-mb-30">
-                                    <%=__('form_title1')%> <span class="g-color-primary"><%=__('form_title2')%></span>
-                                </h2>
-                            </div>
-
-                            <form method="post" action="/contactForm" id="sky-form3" class="myform">
-                              <fieldset>
-                                <div class="form-group g-mb-10">
-                                    <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="text" placeholder="<%=__('form_field1')%>" name="name">
-                                </div>
-
-                                <div class="form-group g-mb-10">
-                                    <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="tel" placeholder="<%=__('form_field2')%>" name="phone">
-                                </div>
-
-                                <div class="form-group g-mb-10">
-                                    <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="email" placeholder="<%=__('form_field3')%>" name="mail">
-                                </div>
-
-                                <div class="form-group g-mb-40">
-                                    <textarea class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-resize-none g-brd-none g-rounded-1 g-pa-10" rows="5" placeholder="<%=__('form_field4')%>" name="msg"></textarea>
-                                </div>
-
-                                <button class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" type="submit" role="button"><%=__('form_send')%></button>
-                              </fieldset>
-
-                                <div class="message">
-                                    <i class="rounded-x fa fa-check"></i>
-                                    <p><%=__('form_submitted')%></p>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+                  <!-- End Google (Map) [custom] -->
                 </div>
+
+                <div class="col-md-6 col-lg-4 d-flex g-bg-primary g-pa-40">
+                  <div class="align-self-center w-100">
+                    <div class="u-heading-v8-2 g-mb-40">
+                      <h2 class="text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-40 mb-0">
+                        <strong class="h6 d-inline-block g-theme-bg-black-v1 g-color-white g-mb-20"><%=__('section5_box')%></strong>
+                        <br>
+                        <span class="g-color-white"><%=__('section5_title1')%></span>
+                        <%=__('section5_title2')%>
+                      </h2>
+                    </div>
+
+                    <p class="g-line-height-1_3 g-font-size-16 g-color-white-opacity-0_8 g-mb-45"><%=__('section5_text')%></p>
+
+                    <address class="text-uppercase g-font-size-default g-mb-40">
+                      <div class="g-mb-20">
+                        <%=__('email_text')%>:
+                        <a class="g-color-white" href="mailto:market">
+                          <strong>palazzoalfeo@gmail.com</strong>
+                        </a>
+                      </div>
+
+                      <div class="g-mb-20">
+                        <%=__('phone_text')%>:
+                        <strong class="g-color-white">+39 3207567546
+                          <br/>
+                          +39 3288174702</strong>
+                      </div>
+
+                      <div>
+                        <%=__('address_text')%>:
+                        <strong class="g-color-white">Via lungomare Alfeo, 17, 96100 Siracusa, SR</strong>
+                      </div>
+                    </address>
+
+                    <ul class="list-inline mb-0">
+                      <li class="list-inline-item g-mr-10">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="u-icon-v3 u-icon-size--xs g-width-35 g-height-35 g-color-primary g-color-white--hover g-bg-white g-bg-gray-dark-v2--hover g-transition-0_2 g-transition--ease-in" href="#!">
+                          <i class="fa fa-tripadvisor"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 d-flex g-theme-bg-black-v1 g-pa-40">
+                  <div class="align-self-center w-100">
+                    <div class="u-heading-v8-2 g-mb-60">
+                      <h2 class="h1 text-uppercase u-heading-v8__title g-font-weight-700 g-font-size-26 g-color-white g-mb-30">
+                        <%=__('form_title1')%>
+                        <span class="g-color-primary"><%=__('form_title2')%></span>
+                      </h2>
+                    </div>
+
+                    <form method="post" action="/contactForm" id="sky-form3" class="myform">
+                      <fieldset>
+                        <div class="form-group g-mb-10">
+                          <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="text" placeholder="<%=__('form_field1')%>" name="name">
+                        </div>
+
+                        <div class="form-group g-mb-10">
+                          <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="tel" placeholder="<%=__('form_field2')%>" name="phone">
+                        </div>
+
+                        <div class="form-group g-mb-10">
+                          <input class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-brd-none g-rounded-1 g-pa-10" type="email" placeholder="<%=__('form_field3')%>" name="mail">
+                        </div>
+
+                        <div class="form-group g-mb-40">
+                          <textarea class="form-control g-font-size-15 g-font-secondary g-color-white-opacity-0_8 g-placeholder-inherit g-theme-bg-gray-dark-v1 u-shadow-v16 g-resize-none g-brd-none g-rounded-1 g-pa-10" rows="5" placeholder="<%=__('form_field4')%>" name="msg"></textarea>
+                        </div>
+
+                        <button class="btn btn-md text-uppercase u-btn-primary g-font-weight-700 g-font-size-12 rounded-0 g-py-10 g-px-25" type="submit" role="button"><%=__('form_send')%></button>
+                      </fieldset>
+
+                      <div class="message">
+                        <i class="rounded-x fa fa-check"></i>
+                        <p><%=__('form_submitted')%></p>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="g-color-gray-dark-v2 g-py-40">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-left g-mb-20 g-mb-0--md">
-                            <a class="d-inline-block g-width-130 g-opacity-0_5" href="/">
-                  <img class="img-fluid" src="assets/img/logo-dark.png" alt="Logo">
-                </a>
-                        </div>
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6 text-center text-md-left g-mb-20 g-mb-0--md">
+                    <a class="d-inline-block g-width-130 g-opacity-0_5" href="/">
+                      <img class="img-fluid" src="assets/img/logo-dark.png" alt="Logo">
+                    </a>
+                  </div>
 
-                        <div class="col-md-6 d-flex align-items-center">
-                            <p class="text-center text-md-right w-100 mb-0">
-                                &copy; 2018 All right reserved. Developed by
-                                <a class="g-color-primary g-color-primary--hover" href="https://www.linkedin.com/in/andreataglia/">Andrea Taglia</a>
-                            </p>
-                        </div>
-                    </div>
+                  <div class="col-md-6 d-flex align-items-center">
+                    <p class="text-center text-md-right w-100 mb-0">
+                      &copy; 2018 All right reserved. Developed by
+                      <a class="g-color-primary g-color-primary--hover" href="https://www.linkedin.com/in/andreataglia/">Andrea Taglia</a>
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
-        </footer>
+          </footer>
 
-        <a class="js-go-to u-go-to-v1" href="#!" data-type="fixed" data-position='{
+          <a class="js-go-to u-go-to-v1" href="#!" data-type="fixed" data-position='{
            "bottom": 15,
            "right": 15
          }' data-offset-top="400" data-compensation="#js-header" data-show-effect="zoomIn">
-        <i class="hs-icon hs-icon-arrow-top"></i>
-      </a>
-    </main>
+            <i class="hs-icon hs-icon-arrow-top"></i>
+          </a>
+        </main>
 
-    <!-- JS Global Compulsory -->
-    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
-    <script src="../../assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
-    <script src="../../assets/vendor/popper.min.js"></script>
-    <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
+        <!-- JS Global Compulsory -->
+        <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+        <script src="../../assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
+        <script src="../../assets/vendor/popper.min.js"></script>
+        <script src="../../assets/vendor/bootstrap/bootstrap.min.js"></script>
 
-    <!-- JS Implementing Plugins -->
-    <script src="../../assets/vendor/appear.js"></script>
-    <script src="../../assets/vendor/slick-carousel/slick/slick.js"></script>
-    <script src="../../assets/vendor/master-slider/source/assets/js/masterslider.min.js"></script>
-    <script src="../../assets/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
-    <script src="../../assets/vendor/gmaps/gmaps.min.js"></script>
+        <!-- JS Implementing Plugins -->
+        <script src="../../assets/vendor/appear.js"></script>
+        <script src="../../assets/vendor/slick-carousel/slick/slick.js"></script>
+        <script src="../../assets/vendor/master-slider/source/assets/js/masterslider.min.js"></script>
+        <script src="../../assets/vendor/cubeportfolio-full/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+        <script src="../../assets/vendor/gmaps/gmaps.min.js"></script>
 
-    <!-- jQuery UI Core -->
-    <script src="../../assets/vendor/jquery-ui/ui/widget.js"></script>
-    <script src="../../assets/vendor/jquery-ui/ui/version.js"></script>
-    <script src="../../assets/vendor/jquery-ui/ui/keycode.js"></script>
-    <script src="../../assets/vendor/jquery-ui/ui/position.js"></script>
-    <script src="../../assets/vendor/jquery-ui/ui/unique-id.js"></script>
-    <script src="../../assets/vendor/jquery-ui/ui/safe-active-element.js"></script>
-    <!-- End jQuery UI Core -->
+        <!-- jQuery UI Core -->
+        <script src="../../assets/vendor/jquery-ui/ui/widget.js"></script>
+        <script src="../../assets/vendor/jquery-ui/ui/version.js"></script>
+        <script src="../../assets/vendor/jquery-ui/ui/keycode.js"></script>
+        <script src="../../assets/vendor/jquery-ui/ui/position.js"></script>
+        <script src="../../assets/vendor/jquery-ui/ui/unique-id.js"></script>
+        <script src="../../assets/vendor/jquery-ui/ui/safe-active-element.js"></script>
+        <!-- End jQuery UI Core -->
 
-    <!-- jQuery UI Helpers -->
-    <script src="../../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
-    <script src="../../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
-    <script src="../../assets/vendor/chosen/chosen.jquery.js"></script>
-    <script src="../../assets/vendor/image-select/src/ImageSelect.jquery.js"></script>
-    <!-- End jQuery UI Helpers -->
+        <!-- jQuery UI Helpers -->
+        <script src="../../assets/vendor/jquery-ui/ui/widgets/menu.js"></script>
+        <script src="../../assets/vendor/jquery-ui/ui/widgets/mouse.js"></script>
+        <script src="../../assets/vendor/chosen/chosen.jquery.js"></script>
+        <script src="../../assets/vendor/image-select/src/ImageSelect.jquery.js"></script>
+        <!-- End jQuery UI Helpers -->
 
-    <!-- SkyForm -->
-    <script src="assets/skyforms/js/jquery.validate.min.js"></script>
-    <script src="assets/skyforms/js/jquery.maskedinput.min.js"></script>
-    <script src="assets/skyforms/js/jquery-ui.min.js"></script>
-    <script src="assets/skyforms/js/jquery.form.min.js"></script>
-    <script src="assets/skyforms/js/contact.js"></script>
+        <!-- SkyForm -->
+        <script src="assets/skyforms/js/jquery.validate.min.js"></script>
+        <script src="assets/skyforms/js/jquery.maskedinput.min.js"></script>
+        <script src="assets/skyforms/js/jquery-ui.min.js"></script>
+        <script src="assets/skyforms/js/jquery.form.min.js"></script>
+        <script src="assets/skyforms/js/contact.js"></script>
 
-    <!-- JS Unify -->
-    <script src="../../assets/js/hs.core.js"></script>
-    <script src="../../assets/js/components/hs.header.js"></script>
-    <script src="../../assets/js/helpers/hs.hamburgers.js"></script>
-    <script src="../../assets/js/components/hs.scroll-nav.js"></script>
-    <script src="../../assets/js/components/hs.datepicker.js"></script>
-    <script src="../../assets/js/components/hs.select.js"></script>
-    <script src="../../assets/js/components/hs.popup.js"></script>
-    <script src="../../assets/js/components/hs.carousel.js"></script>
-    <script src="../../assets/js/components/hs.cubeportfolio.js"></script>
-    <script src="../../assets/js/components/gmap/hs.map.js"></script>
-    <script src="../../assets/js/components/hs.go-to.js"></script>
+        <!-- JS Unify -->
+        <script src="../../assets/js/hs.core.js"></script>
+        <script src="../../assets/js/components/hs.header.js"></script>
+        <script src="../../assets/js/helpers/hs.hamburgers.js"></script>
+        <script src="../../assets/js/components/hs.scroll-nav.js"></script>
+        <script src="../../assets/js/components/hs.datepicker.js"></script>
+        <script src="../../assets/js/components/hs.select.js"></script>
+        <script src="../../assets/js/components/hs.popup.js"></script>
+        <script src="../../assets/js/components/hs.carousel.js"></script>
+        <script src="../../assets/js/components/hs.cubeportfolio.js"></script>
+        <script src="../../assets/js/components/gmap/hs.map.js"></script>
+        <script src="../../assets/js/components/hs.go-to.js"></script>
 
-    <!-- JS Customization -->
-    <script src="../../assets/js/custom.js"></script>
+        <!-- JS Customization -->
+        <script src="../../assets/js/custom.js"></script>
 
-    <!-- JS Plugins Init. -->
-    <script>
-        // initialization of master slider
-        var promoSlider = new MasterSlider();
+        <!-- JS Plugins Init. -->
+        <script>
+          // initialization of master slider
+          var promoSlider = new MasterSlider();
 
-        promoSlider.setup('masterslider', {
+          promoSlider.setup('masterslider', {
             width: 1400,
             height: 580,
             speed: 70,
@@ -855,9 +990,9 @@
             loop: true,
             preload: 0,
             autoplay: true
-        });
+          });
 
-        promoSlider.control('thumblist', {
+          promoSlider.control('thumblist', {
             autohide: false,
             dir: 'h',
             align: 'bottom',
@@ -866,16 +1001,14 @@
             margin: 0,
             space: 0,
             hideUnder: 767
-        });
+          });
 
-        // initialization of google map
-        function initMap() {
+          // initialization of google map
+          function initMap() {
             $.HSCore.components.HSGMap.init('.js-g-map');
-        }
+          }
 
-        $(document).on('ready', function() {
-
-
+          $(document).on('ready', function () {
 
             // initialization of header
             $.HSCore.components.HSHeader.init($('#js-header'));
@@ -892,64 +1025,64 @@
 
             // contact form
             ContactForm.initContactForm();
-        });
+          });
 
-        $(window).on('load', function() {
+          $(window).on('load', function () {
             // initialization of HSScrollNav
-            $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {
-                duration: 700
-            });
+            $.HSCore.components.HSScrollNav.init($('#js-scroll-nav'), {duration: 700});
 
             // init cubeportfolio
             $('#js-grid-full-width').cubeportfolio({
-                filters: '#js-filters-full-width',
-                layoutMode: 'mosaic',
-                sortByDimension: true,
-                defaultFilter: '*',
-                animationType: 'fadeOutTop',
-                gapHorizontal: 0,
-                gapVertical: 0,
-                gridAdjustment: 'responsive',
-                mediaQueries: [{
-                    width: 1500,
-                    cols: 5,
+              filters: '#js-filters-full-width',
+              layoutMode: 'mosaic',
+              sortByDimension: true,
+              defaultFilter: '*',
+              animationType: 'fadeOutTop',
+              gapHorizontal: 0,
+              gapVertical: 0,
+              gridAdjustment: 'responsive',
+              mediaQueries: [
+                {
+                  width: 1500,
+                  cols: 5
                 }, {
-                    width: 1100,
-                    cols: 4,
+                  width: 1100,
+                  cols: 4
                 }, {
-                    width: 800,
-                    cols: 3,
+                  width: 800,
+                  cols: 3
                 }, {
-                    width: 480,
-                    cols: 2,
-                    options: {
-                        caption: '',
-                        gapHorizontal: 10,
-                        gapVertical: 10,
-                    }
-                }],
-                caption: 'zoom',
-                displayType: 'fadeIn',
-                displayTypeSpeed: 100,
+                  width: 480,
+                  cols: 2,
+                  options: {
+                    caption: '',
+                    gapHorizontal: 10,
+                    gapVertical: 10
+                  }
+                }
+              ],
+              caption: 'zoom',
+              displayType: 'fadeIn',
+              displayTypeSpeed: 100,
 
-                // lightbox
-                lightboxDelegate: '.cbp-lightbox',
-                lightboxGallery: true,
-                lightboxTitleSrc: 'data-title',
-                lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
+              // lightbox
+              lightboxDelegate: '.cbp-lightbox',
+              lightboxGallery: true,
+              lightboxTitleSrc: 'data-title',
+              lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
 
-                plugins: {
-                    loadMore: {
-                        element: '#js-loadMore-full-width',
-                        action: 'click',
-                        loadItems: 3,
-                    }
-                },
+              plugins: {
+                loadMore: {
+                  element: '#js-loadMore-full-width',
+                  action: 'click',
+                  loadItems: 3
+                }
+              }
             });
-        });
-    </script>
+          });
+        </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtt1z99GtrHZt_IcnK-wryNsQ30A112J0&callback=initMap" async></script>
-</body>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtt1z99GtrHZt_IcnK-wryNsQ30A112J0&callback=initMap" async="async"></script>
+      </body>
 
-</html>
+    </html>
