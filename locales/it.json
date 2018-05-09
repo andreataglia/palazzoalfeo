@@ -62,8 +62,8 @@
 	"form_title2": "Ora",
 	"form_field1": "Il tuo nome",
 	"form_field2": "Numero di Telefono",
-	"form_field3": "La tua mail",
+	"form_field3": "Date (check in - check out)",
+	"form_field4": "Messaggio (nome appartamento, domande, richieste)",
   "form_send": "Invia",
-	"form_field4": "Messaggio (inserire anche le Date e l'Appartamento di preferenza)",
 	"form_submitted": "Messaggio inviato correttamente! Ti ricontatteremo il prima possibile"
 }
