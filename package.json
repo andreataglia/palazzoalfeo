@@ -13,7 +13,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
     "b-sync": "node ./index.js | browser-sync start --proxy \"localhost:5000\" --files \"html/one-pages/palazzoalfeo/*.html\" \"html/one-pages/palazzoalfeo/*.ejs\" \"html/one-pages/palazzoalfeo/assets/css/*.css\"",
     "start": "node ./index.js"
   },
