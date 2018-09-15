@@ -84,10 +84,10 @@ app.post('/contactForm', function(req, res) {
 
     // setup e-mail data with unicode symbols
     var mailOptions = {
-        from: "Palazzo Alfeo", // sender address
+        from: req.body.phone, // sender address
         to: "palazzoalfeo@gmail.com", // list of receivers
         subject: "Massaggio da palazzoalfeo.it", // Subject line
-        html: '<p><b>Nome</b>: ' + req.body.name + ' <br> <b>Numero</b>: ' + req.body.phone +' <br> <b>Date</b>: ' + req.body.dates +' <br> <b>Messaggio</b>: ' + messaggio + '<p> <p>Mail generata da palazzoalfeo.it</p>'
+        html: '<p><b>Nome</b>: ' + req.body.name + ' <br> <b>Email</b>: ' + req.body.phone +' <br> <b>Date</b>: ' + req.body.dates +' <br> <b>Messaggio</b>: ' + messaggio + '<p> <p>Mail generata da palazzoalfeo.it</p>'
     };
 
     // send mail with defined transport object
