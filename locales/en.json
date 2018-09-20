@@ -65,5 +65,7 @@
 	"form_field3": "Dates (check in - check out)",
 	"form_field4": "Message (apartment name, questions, requests)",
 	"form_send": "Submit",
-	"form_submitted": "Message sent correctly! We'll get back to you as soon as possible"
+	"form_submitted": "Message sent correctly! We'll get back to you as soon as possible",
+
+	"gallery_mix_label": "Mixed"
 }

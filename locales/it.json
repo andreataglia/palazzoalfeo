@@ -64,6 +64,8 @@
 	"form_field2": "Numero di Telefono",
 	"form_field3": "Date (check in - check out)",
 	"form_field4": "Messaggio (nome appartamento, domande, richieste)",
-  "form_send": "Invia",
-	"form_submitted": "Messaggio inviato correttamente! Ti ricontatteremo il prima possibile"
+  	"form_send": "Invia",
+	"form_submitted": "Messaggio inviato correttamente! Ti ricontatteremo il prima possibile",
+
+	
 }
